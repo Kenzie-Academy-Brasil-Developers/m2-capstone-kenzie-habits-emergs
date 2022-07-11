@@ -117,6 +117,7 @@ Ao clonar o repositório já será dada uma estrutura básica para o projeto. Es
 
 **Aviso**
 
+
 Durante o desenvolvimento o repositório deve permanecer private, após as apresentações poderá ficar público e compartilhar nas redes sociais.
 
 ---
