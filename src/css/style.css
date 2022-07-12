@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+
+  --brand-1: #415AF3;
+  --brand-2: #4150D2;
+  --brand-3: #D7E4FB;
+
+  --grey-1: #212529;
+  --grey-2: #343A40;
+  --grey-3: #DEE2E6;
+  --grey-4: #E9ECEF;
+  --grey-5: #F1F3F5;
+  --grey-6: #FFFFFF;
+
+  --sucess: #56CF8E;
+  --error-1: #E64445;
+  --error-2: #F03839;
+
+
+}
+
+body {
+  color: var(--brand-1);
+}
