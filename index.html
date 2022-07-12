@@ -6,25 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de login</title>
 </head>
-    <main>
-        <body>
+  <body>
+      <main>
             <div>
-                <h1> Login </h1>
-                <label for="User"> Usuário </label>
-                <input type="text" id="User" placeholder="Nome de usuário">
 
-                <label for="Password"> Senha </label>
-                <input type="password" id="Password" placeholder="Digite sua senha">
+              <h1> KenzieHabit </h1>
+              <p> <a href="">If you are going to use a passage of Lorem ipsum</a></p>
+              <span> you need to be sure there insn't anything </span>
 
-                <button name="buttonLogin" class="buttonLogin">Entrar</button>
             </div>     
-
+            
             <div>
-                <h1> KenzieHabit </h1>
-                <p> <a href="">If you are going to use a passage of Lorem ipsum</a></p>
-                <span> you need to be sure there insn't anything </span>
+              
+              <h1> Login </h1>
 
-            </div>       
-        </body>
-    </main>
+                <form>
+                  <label for="user"> Usuário </label>
+                  <input type="email" id="user" placeholder="Nome de usuário">
+      
+                  <label for="password"> Senha </label>
+                  <input type="password" id="password" placeholder="Digite sua senha">
+                </form>
+  
+              <button name="buttonLogin" class="buttonLogin" id="buttonLogin">Entrar</button>
+
+            </div> 
+
+             <script type="module" src="./src/scripts/login.js"></script>
+      </main>
+  </body>
 </html>
