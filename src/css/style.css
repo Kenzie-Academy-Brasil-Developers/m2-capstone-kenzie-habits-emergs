@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
 
 * :root {
-  font-family: 'Inter', sans-serif;
-
   --brand-1: #415AF3;
   --brand-2: #4150D2;
   --brand-3: #D7E4FB;
@@ -17,8 +19,6 @@
   --sucess: #56CF8E;
   --error-1: #E64445;
   --error-2: #F03839;
-
-
 }
 
 #containerUserInfo {
@@ -30,7 +30,7 @@
 
 body {
   color: var(--brand-1);
-  background-color: #4150D2;
+  background-color: var(--grey-6);
 }
 
 .table {
@@ -42,24 +42,25 @@ body {
   padding: 0px;
 }
 
-@media ( max-width: 800px ) {
+@media (max-width: 800px) {
 
-.boxs:nth-child(3n){
-  margin-right: 0%;
- }
+  .boxs:nth-child(3n) {
+    margin-right: 0%;
+  }
 
 }
-@media ( min-width: 800px ) {
 
-#containerUserInfo {
-  width: 21.25%;
-  height: 27px;
-  left: 306px;
-  top: 15px;
-}
+@media (min-width: 800px) {
 
-#containerUserInfo:nth-child(4n) {
-  margin-right: 0%;
-}
-  
+  #containerUserInfo {
+    width: 21.25%;
+    height: 27px;
+    left: 306px;
+    top: 15px;
+  }
+
+  #containerUserInfo:nth-child(4n) {
+    margin-right: 0%;
+  }
+
 }
