@@ -72,7 +72,7 @@ Como já foi informado, você e sua equipe irão desenvolver um projeto durante 
 - Padronização nos nomes das branches
 - Os commits seguem um padrão
 
-  [Padrão de commits Coventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/)
+  [Padrão de commits Coventional Commits](https://www.conventio-nalcommits.org/pt-br/v1.0.0/)
 
 - Estilização da checkbox
 - Popup de erro para as requisições
