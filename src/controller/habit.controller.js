@@ -1,15 +1,15 @@
 import Api from "./api.controller.js";
 export default class Habit {
   static table = document.querySelector(".table");
-  static createButton = document.querySelector("#createButton"); //botao de criar que abre o modal.
-  static mmodal = document.querySelector("#createHabits"); //query selectior do modal de criação.
-  static submitCreate = document.querySelector("#createForm"); //quyeryselecotr do form de criação.
-  static modalEdit = document.querySelector("#editHabits"); //queryselector do form do modal de editar
-  static editForm = document.querySelector("#formEdit"); //queryselector do form do modal de editar
-  static buttonEditModal = document.querySelector("#btn-saveChangesProfile"); //botao de editar form dentro do modal
-  static buttonDelete = document.querySelector("#btn-delete"); //botao de deletar habito dentro do modal
-  static buttonComplete = document.querySelector("#completeButton"); //query selectoe do botao de concluidos
-  static buttonAll = document.querySelector("buttonAll"); //query selector do botao de todos
+  static createButton = document.querySelector("#createButton");
+  static mmodal = document.querySelector("#createHabits");
+  static submitCreate = document.querySelector("#createForm");
+  static modalEdit = document.querySelector("#editHabits");
+  static editForm = document.querySelector("#formEdit");
+  static buttonEditModal = document.querySelector("#btn-saveChangesProfile");
+  static buttonDelete = document.querySelector("#btn-delete");
+  static buttonComplete = document.querySelector("#completeButton");
+  static buttonAll = document.querySelector("buttonAll");
   static modalDelete = document.querySelector("#btn-delete");
   static async createHabits() {
     this.createButton.addEventListener("click", () => {
@@ -24,7 +24,6 @@ export default class Habit {
         description: descData[1].value,
         category: descData[2].value,
       };
-      console.log(newObject);
       await Api.createHabits(newObject);
       alert("Nova Tarefa adicionada");
       this.mmodal.classList.add("display_none");
@@ -48,19 +47,16 @@ export default class Habit {
         this.modalEdit.classList.add("display_none");
       }
     });
-
     this.editForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      console.log("4444444444444444");
       const descData = [...this.editForm.elements];
-      console.log(descData);
+
       const newObject = {
         title: descData[0].value,
         description: descData[1].value,
         category: descData[2].value,
       };
       const idPost = localStorage.getItem("@capstone-m2:idPost");
-      console.log(idPost);
 
       await Api.updateHabit(idPost, newObject);
       location.reload();
@@ -69,9 +65,8 @@ export default class Habit {
     });
   }
   static async deleteHabits() {
-    this.buttonDelete.addEventListener("click", async (e) => {
+    this.buttonDelete.addEventListener("click", async () => {
       const idPost = localStorage.getItem("@capstone-m2:idPost");
-      console.log(idPost);
       this.modalEdit.classList.add("display_none");
       // this.modalDelete.classList.remove('display_none')
       await Api.deleteHabit(idPost);
@@ -80,7 +75,7 @@ export default class Habit {
   }
   static async listHabits() {
     const response = await Api.readHabits();
-    console.log(response);
+
     response.forEach((e) => {
       const tr = document.createElement("tr");
       tr.classList.add("habitLine");
@@ -108,7 +103,6 @@ export default class Habit {
       tr.append(lineCheckbox, title, description, category, editar);
       inputCheckbox.addEventListener("change", async () => {
         if (inputCheckbox.checked) {
-          console.log(e.habit_id);
           await Api.completeHabit(e.habit_id);
         }
       });
