@@ -18,3 +18,150 @@
   --error-1: #E64445;
   --error-2: #F03839;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-X {
+  background-color: var(--grey-6);
+  border: none;
+  color: var(--grey-3);
+  width: 1rem;
+}
+
+.createHabits,
+.container-deleteHabits {
+  background-color: var(--grey-6);
+  color: var(--grey-2);
+  width: 32rem;
+  height: 30rem;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  border-radius: 8px;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.header-createHabits,
+.header-editHabits,
+.checkbox,
+.header-deleteHabits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25rem;
+}
+
+.title,
+.name,
+.image {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--grey-5);
+  color: var(--grey--2--);
+  width: 25rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+}
+
+.description {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--grey-5);
+  color: var(--grey--2--);
+  width: 25rem;
+  height: 5rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+}
+
+.selectcategory {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--grey-5);
+  color: var(--grey--2--);
+  width: 25rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+}
+
+.btn-createHabits {
+  background-color: var(--brand-1);
+  width: 25rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+  color: var(--grey-6);
+}
+
+.btn-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25rem;
+}
+
+.btn-delete {
+  background-color: var(--grey-5);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+  color: var(--grey-2);
+}
+
+.btn-saveChanges {
+  background-color: var(--brand-3);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+  color: var(--grey-6);
+}
+
+.btn-saveChangesProfile {
+  background-color: var(--brand-3);
+  width: 25.5rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+  color: var(--grey-6);
+}
+
+#checkbox {
+  border: 1.4px solid var(--grey-3);
+  border-radius: 2px;
+  width: 1rem;
+  height: 1rem;
+}
+
+.btn-saveChangesDelete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25rem;
+}
+
+.btn-cancel {
+  background-color: var(--grey-5);
+  color: var(--grey-2);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: transparent;
+}
+
+.btn-yesDelete {
+  background-color: var(--error-1);
+  color: var(--grey-6);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: transparent;
+}
