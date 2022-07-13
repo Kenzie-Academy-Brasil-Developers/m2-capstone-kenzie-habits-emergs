@@ -22,9 +22,9 @@ export default class User{
   }
 
   static async showUser(){
-    const imgSmall = document.querySelector();
-    const imgLarge = document.querySelector();
-    const userName = document.querySelector();
+    const imgSmall = document.querySelector('#containerLogo img');
+    const imgLarge = document.querySelector('#userContainer img');
+    const userName = document.querySelector('#userContainer h2');
 
     imgSmall.src = localStorage.getItem('@capstone-m2:image');
     imgLarge.src = localStorage.getItem('@capstone-m2:image'); 
@@ -58,8 +58,10 @@ export default class User{
   }
 
   static async logout(){
-    console.log(Api.token)
+    window.location.href = '../../index.html';
+    localStorage.removeItem('@capstone-m2:user');
+    localStorage.removeItem('@capstone-m2:token');
+    localStorage.removeItem('@capstone-m2:image');
+    localStorage.removeItem('@capstone-m2:email');
   }
 }
-
-User.logout()

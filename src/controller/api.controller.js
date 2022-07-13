@@ -33,7 +33,7 @@ export default class Api {
     const options = {
       method: "PATCH",
       headers: this.headers,
-      body: JSON.stringify({ usr_image: data }),
+      body: JSON.stringify(data),
     };
     const response = await fetch(urlEditProfile, options)
       .then((response) => response.json())
