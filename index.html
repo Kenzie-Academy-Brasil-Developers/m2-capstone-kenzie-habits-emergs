@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/style.login.css">
     <title>Página de login</title>
 </head>
   <body>
       <main>
-            <div>
+        <section>
 
-              <h1> KenzieHabit </h1>
-              <p> <a href="">If you are going to use a passage of Lorem ipsum</a></p>
-              <span> you need to be sure there insn't anything </span>
+          <div class="kenzieHabit">
 
-            </div>     
+            <h1> KenzieHabit </h1>
+            <p> <a href="">If you are going to use a passage of Lorem ipsum </a></p>
+            <span> you need to be sure there insn't anything </span>
+
+          </div>     
+          
+          <div class="login">
             
-            <div>
-              
-              <h1> Login </h1>
+            <h1> Login </h1>
 
-                <form>
-                  <label for="user"> Usuário </label>
-                  <input type="email" id="user" placeholder="Nome de usuário">
-      
-                  <label for="password"> Senha </label>
-                  <input type="password" id="password" placeholder="Digite sua senha">
-                </form>
-  
+              <form>
+                <label for="user" id="userLabel"> Usuário </label>
+                <input type="email" id="user" placeholder="Nome de usuário">
+    
+                <label for="password" id="passwordLabel">  Senha </label>
+                <input type="password" id="password" placeholder="Digite sua senha">
+              </form>
               <button name="buttonLogin" class="buttonLogin" id="buttonLogin">Entrar</button>
 
-            </div> 
+
+          </div> 
+        </section>
 
              <script type="module" src="./src/scripts/login.js"></script>
       </main>
