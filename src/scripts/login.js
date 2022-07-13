@@ -7,7 +7,7 @@ function run(){
 
   btnLogin.addEventListener('click',(event)=>{
     event.preventDefault()
-    User.login(user.value,password.value)
+    User.login(user.value, password.value)
     })
 }
 
