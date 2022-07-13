@@ -23,7 +23,114 @@
 
 body {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 1500px;
+}
+
+.containerLogo {
+  color: var(--brand-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  padding-left: 250px;
+  padding-right: 260px;
+}
+
+.containerLogo h1 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.userContainer {
+  background-color: var(--brand-1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  height: 160px;
+  font-size: 20px;
+  color: var(--grey-6);
+  font-weight: 600;
+  padding: 20px;
+  padding-left: 250px;
+}
+
+.userContainer img {
+  width: 60px;
+  height: 60px;
+}
+
+.h2Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  ;
+}
+
+.h2Buttons h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn-filter {
+  border: none;
+  color: var(--grey-2);
+  background-color: var(--grey-6);
+  font-size: 16px;
+  font-weight: 500px;
+}
+
+.btn-filterCreate {
+  color: var(--grey-6);
+  background-color: var(--brand-1);
+  font-size: 16px;
+  font-weight: 500px;
+  border: 2px solid var(--brand-1);
+  border-radius: 4px;
+}
+
+.table {
+  border: 1px solid var(--grey-4);
+  border-collapse: collapse;
+  width: 1000px;
+  height: 390px;
+  font-size: 14px;
+}
+
+table th {
+  color: var(--grey-3);
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--grey-4);
+  height: 40px;
+  text-align: center;
+}
+
+table td{
+  border-bottom: 1px solid var(--grey-4);
+  height: 40px;
+}
+
+.tableCategory{
+  background-color: var(--brand-3);
+  border: transparent;
+  border-radius: 4px;
+  color: var(--brand-1);
+  text-align: center;
+  height: 24px;
+  display: inline-block;
+  padding: 5px 8px ;
 }
 
 .btn-X {
@@ -33,8 +140,25 @@ body {
   width: 1rem;
 }
 
+.btn-Edit{
+  border: none;
+  background-color: var(--grey-6);
+}
+
+.loadMore {
+  border: 2px solid var(--brand-1);
+  background-color: var(--brand-1);
+  color: var(--grey-6);
+  width: 150px;
+  height: 30px;
+  border-radius: 4px;
+  margin-left: 400px;
+}
+
 .createHabits,
-.container-deleteHabits {
+.container-deleteHabits,
+.editHabits,
+.editProfile {
   background-color: var(--grey-6);
   color: var(--grey-2);
   width: 32rem;
@@ -51,7 +175,8 @@ body {
 .header-createHabits,
 .header-editHabits,
 .checkbox,
-.header-deleteHabits {
+.header-deleteHabits,
+.header-editProfile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
