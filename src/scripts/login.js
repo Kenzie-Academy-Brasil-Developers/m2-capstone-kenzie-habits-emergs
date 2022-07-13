@@ -5,7 +5,8 @@ function run(){
   const password = document.querySelector('#password');
   const btnLogin = document.querySelector('#buttonLogin');
 
-  btnLogin.addEventListener('click',()=>{
+  btnLogin.addEventListener('click',(event)=>{
+    event.preventDefault()
     User.login(user.value,password.value)
     })
 }

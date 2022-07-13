@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/home.css">
-    <title>KenzieHabit</title>
+    <title>Document</title>
 </head>
-
 <body>
     <header>
-        <img src="../assets/img/KenzieHabit.png" alt="logo">
+        <div>
+            <h1>KenzieHabit</h1>
+            <img src="../assets/img/KenzieHabit.png" alt="logo">
+        </div>
         <div id="containerUserInfo">
-            <img src="../assets/img/user.png" alt="user">
+            <img src="../assets/img/user.png" alt="">
+            <h2>Usuario</h2>
         </div>
     </header>
     <main>
         <section class="userContainer">
-            <img src="src\assets\img\Ellipse 2.png" alt="userImage">
-            <h2>Julia Silva Camargo</h2>
         </section>
         <section class="habitsContainer">
             <div class="task">
@@ -81,6 +82,90 @@
                     <td><button>editar</button></td>
                 </tr>
             </table>
-            <button class="loadMore" id="loadMore1">Carregar Mais </button>
+                        <button class="loadMore" id="loadMore1">Carregar Mais </button>
         </section>
+        <div class="container-deleteHabits">
+            <div class="header-deleteHabits">
+                <h3>Excluir Hábito</h3>
+                <button class="btn btn-X">X</button>
+            </div>
+            <h3>Certeza que deseja excluir esse hábito?</h3>
+            <p>Após executar essa ação não será possível desfazer</p>
+            <div class="btn-saveChangesDelete">
+                <button type="button" class="btn btn-cancel">Cancelar</button>
+                <button type="button" class="btn btn-yesDelete">Sim, excluir esse hábito</button>
+            </div>
+        </div>
+
+        <div class="editHabits" id="editHabits">
+            <div class="header-editHabits">
+                <h3>Editar Hábito</h3>
+                <button class="btn btn-X">X</button>
+            </div>
+            <form>
+                <label for="titulo">Título</label><br>
+                <input type="text" placeholder="Fazer exercícios segunda pela manhã" class="title"><br>
+                <label for="description">Descrição</label><br>
+                <input type="text" placeholder="Ir correr na praça próximo de casa ás 7:30 da manhã"
+                    class="description"><br>
+                <label for="category" class="category">Categoria</label><br>
+                <select name="selectcategory" class="selectcategory">
+                    <option value="saude">&#10084 Saúde</option>
+                    <option value="lazer">Lazer</option>
+                    <option value="trabalho">Trabalho</option>
+                    <option value="estudo">Estudo</option>
+                    <option value="casa">Casa</option>
+                    <option value="outro">Outros</option>
+                    <option value="">Selecionar categoria</option>
+                </select><br>
+                <div class="checkbox">
+                    <h4>Status</h4>
+                <input type="checkbox" id="status" name="status" value="checked">
+                </div>
+                <div class="btn-div">
+                    <button type="button" class="btn btn-delete">Excluir</button>
+                    <button type="button" class="btn btn-saveChanges">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="createHabits" id="createHabits">
+            <div class=" header-createHabits">
+                <h3>Editar Perfil</h3>
+                <button class="btn btn-X">X</button>
+            </div>
+            <form>
+                <label for="name">Nome</label><br>
+                <input type="text" placeholder="Júlia Silva Camargo" class="name"><br>
+                <label for="image">URL da imagem do perfil</label><br>
+                <input type="text" placeholder="https://imagem.com.br" class="image"><br>
+                <button type="button" class="btn btn-saveChangesProfile">Salvar Alterações</button>
+                </form>
+        </div>
+
+        <div class="createHabits" id="createHabits">
+            <div class=" header-createHabits">
+                <h3>Criar Hábito</h3>
+                <button class="btn btn-X">X</button>
+            </div>
+            <form>
+                <label for="titulo">Título</label><br>
+                <input type="text" placeholder="Digitar Título" class="title"><br>
+                <label for="description">Descrição</label><br>
+                <input type="text" placeholder="Digitar descrição" class="description"><br>
+                <label for="category" class="category">Categoria</label><br>
+                <select name="selectcategory" class="selectcategory">
+                    <option value="">Selecionar categoria</option>
+                    <option value="saude">&#10084 Saúde</option>
+                    <option value="lazer">Lazer</option>
+                    <option value="trabalho">Trabalho</option>
+                    <option value="estudo">Estudo</option>
+                    <option value="casa">Casa</option>
+                    <option value="outro">Outros</option>
+                </select><br>
+                <button type="button" class="btn btn-createHabits">Inserir</button>
+            </form>
+        </div>
+
+        
     </main>
