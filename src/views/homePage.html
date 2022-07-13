@@ -18,7 +18,7 @@
     </header>
     <main>
         <section class="userContainer">
-            <img src="src\assets\img\Ellipse 2.png" alt="userImage">
+            <!-- <img src="src\assets\img\Ellipse 2.png" alt="userImage"> -->
             <h2>Julia Silva Camargo</h2>
         </section>
         <section class="habitsContainer">
@@ -26,9 +26,9 @@
                 <h2>Tarefas</h2>
             </div>
             <nav clas="filterButtons">
-                <button>Todos</button>
-                <button>Concluidos</button>
-                <button>Criar</button>
+                <button id="showAll">Todos</button>
+                <button id="showConcluded">Concluidos</button>
+                <button id="createHabbitButton">Criar</button>
             </nav>
             <table class="table">
                 <tr>
@@ -53,7 +53,7 @@
                     <td><button>editar</button></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></input></td>
                     <td>fazer exercicios segunda pela manhã</td>
                     <td>ir correr na praça proximo da padaria</td>
                     <td>saude</td>
@@ -84,3 +84,5 @@
             <button class="loadMore" id="loadMore1">Carregar Mais </button>
         </section>
     </main>
+    </body>
+    <script type="module" src="../scripts/home.js" ></script>
