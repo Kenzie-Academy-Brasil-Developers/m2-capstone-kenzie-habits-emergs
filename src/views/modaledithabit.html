@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./modalhabit.css">
+</head>
+
+<body>
+    <div class="editHabits" id="editHabits">
+        <div class="header-editHabits">
+            <h3>Editar Hábito</h3>
+            <button class="btn btn-X">X</button>
+        </div>
+        <form>
+            <label for="titulo">Título</label><br>
+            <input type="text" placeholder="Fazer exercícios segunda pela manhã" class="title"><br>
+            <label for="description">Descrição</label><br>
+            <input type="text" placeholder="Ir correr na praça próximo de casa ás 7:30 da manhã"
+                class="description"><br>
+            <label for="category" class="category">Categoria</label><br>
+            <select name="selectcategory" class="selectcategory">
+                <option value="saude">&#10084 Saúde</option>
+                <option value="lazer">Lazer</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="estudo">Estudo</option>
+                <option value="casa">Casa</option>
+                <option value="outro">Outros</option>
+                <option value="">Selecionar categoria</option>
+            </select><br>
+            <div class="checkbox">
+                <h4>Status</h4>
+            <input type="checkbox" id="status" name="status" value="checked">
+            </div>
+            <div class="btn-div">
+                <button type="button" class="btn btn-delete">Excluir</button>
+                <button type="button" class="btn btn-saveChanges">Salvar Alterações</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
