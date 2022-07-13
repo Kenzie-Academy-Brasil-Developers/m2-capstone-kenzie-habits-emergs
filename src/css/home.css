@@ -5,8 +5,10 @@
 
   --brand-1: #415AF3;
   --brand-2: #4150D2;
-  --brand-3: #D7E4FB;
+  --brand-3: #A0ADF9;
+  --brand-4: #D7E4FB;
 
+  --black: #000000;
   --grey-1: #212529;
   --grey-2: #343A40;
   --grey-3: #DEE2E6;
@@ -18,3 +20,4 @@
   --error-1: #E64445;
   --error-2: #F03839;
 }
+

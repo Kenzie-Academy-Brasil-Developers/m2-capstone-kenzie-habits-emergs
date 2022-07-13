@@ -34,7 +34,8 @@ body {
 }
 
 .createHabits,
-.container-deleteHabits {
+.container-deleteHabits,
+.editHabits {
     background-color: var(--grey-6);
     color: var(--grey-2);
     width: 32rem;
@@ -45,7 +46,7 @@ body {
     border-radius: 8px;
     flex-direction: column;
     gap: 1rem;
-
+    position: absolute;
 }
 
 .header-createHabits,
