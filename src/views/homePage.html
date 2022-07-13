@@ -12,26 +12,26 @@
 
 <body>
     <header>
-        <div class="containerLogo">
+        <div id="containerLogo" class="containerLogo">
         <h1>KenzieHabit</h1>
             <img src="../assets/img/user.png" alt="">
 
         </div>
-        <div class="userContainer">
+        <div id="userContainer" class="userContainer">
             <img src="../assets/img/Ellipse 2.png" alt="userImage">
             <h2>Julia Silva Camargo</h2>
         </div>
     </header>
     <main>
-        <div class="h2Buttons">
+        <div id="h2Buttons" class="h2Buttons">
             <h2>Tarefas</h2>
-            <div clas="filterButtons">
+            <div id="filterButtons" class="filterButtons">
                 <button class="btn btn-filter">Todos</button>
                 <button class="btn btn-filter">Concluidos</button>
                 <button class="btn btn-filterCreate">Criar</button>
             </div>
         </div>
-        <table class="table">
+        <table id="table" class="table">
             <tr>
                 <th>Status</th>
                 <th>Título</th>
@@ -121,7 +121,7 @@
         </div>
     </main>
 
-    <div class="container-deleteHabits">
+    <div id="deleteHabits" class="container-deleteHabits">
         <div class="header-deleteHabits">
             <h3>Excluir Hábito</h3>
             <button class="btn btn-X">X</button>
@@ -134,10 +134,10 @@
         </div>
     </div>
 
-    <div class="editHabits" id="editHabits">
+    <div id="editHabits" class="editHabits">
         <div class="header-editHabits">
             <h3>Editar Hábito</h3>
-            <button class="btn btn-X">X</button>
+            <button id="btn-editHabitsClose" class="btn btn-X">X</button>
         </div>
         <form>
             <label for="titulo">Título</label><br>
@@ -160,30 +160,30 @@
                 <input type="checkbox" id="status" name="status" value="checked">
             </div>
             <div class="btn-div">
-                <button type="button" class="btn btn-delete">Excluir</button>
-                <button type="button" class="btn btn-saveChanges">Salvar Alterações</button>
+                <button type="button" id="btn-delete" class="btn btn-delete">Excluir</button>
+                <button type="button" id="btn-saveChanges" class="btn btn-saveChanges">Salvar Alterações</button>
             </div>
         </form>
     </div>
 
-    <div class="editProfile" id="editProfile">
+    <div id="editProfile" class="editProfile">
         <div class="header-editProfile">
             <h3>Editar Perfil</h3>
-            <button class="btn btn-X">X</button>
+            <button id="btn-saveChangesProfileClose" class="btn btn-X">X</button>
         </div>
         <form>
             <label for="name">Nome</label><br>
             <input type="text" placeholder="Júlia Silva Camargo" class="name"><br>
             <label for="image">URL da imagem do perfil</label><br>
             <input type="text" placeholder="https://imagem.com.br" class="image"><br>
-            <button type="button" class="btn btn-saveChangesProfile">Salvar Alterações</button>
+            <button type="button" id="btn-saveChangesProfile" class="btn btn-saveChangesProfile">Salvar Alterações</button>
         </form>
     </div>
 
-    <div class="createHabits" id="createHabits">
+    <div id="createHabits" class="createHabits">
         <div class=" header-createHabits">
             <h3>Criar Hábito</h3>
-            <button class="btn btn-X">X</button>
+            <button id="btn-createHabitsClose" class="btn btn-X">X</button>
         </div>
         <form>
             <label for="titulo">Título</label><br>
@@ -200,7 +200,7 @@
                 <option value="casa">Casa</option>
                 <option value="outro">Outros</option>
             </select><br>
-            <button type="button" class="btn btn-createHabits">Inserir</button>
+            <button type="button" id="btn-createHabits" class="btn btn-createHabits">Inserir</button>
         </form>
     </div>
 </body>
