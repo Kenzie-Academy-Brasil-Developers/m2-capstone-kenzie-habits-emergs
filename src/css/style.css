@@ -4,7 +4,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-* :root {
+:root {
   --brand-1: #415AF3;
   --brand-2: #4150D2;
   --brand-3: #D7E4FB;
@@ -21,46 +21,106 @@
   --error-2: #F03839;
 }
 
-#containerUserInfo {
-  width: 131px;
-  height: 27px;
-  left: 306px;
-  top: 15px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  text-decoration:none;
 }
 
-body {
-  color: var(--brand-1);
-  background-color: var(--grey-6);
-}
-
-.table {
-  box-sizing: border-box;
+main{
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items:center;
+}
+section{
+  width: 70%;
+  max-width: 1080px;
+  height: 485px;
+  display: flex;
+  flex-direction:column;
+  box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.kenzieHabit{
+  width: 100%;
+  height: 30%;
+  padding:5% 8%;
+  background-color: #4150D2;
+  color:white;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  gap:10%;
+  border-radius:10px 10px 0 0;
+}
+
+.login{
+  display: flex;
+  flex-direction:column;
   align-items: center;
-  padding: 0px;
+  padding:5%;
 }
 
-@media (max-width: 800px) {
-
-  .boxs:nth-child(3n) {
-    margin-right: 0%;
-  }
-
+.login h1{
+  margin-bottom:25px;
 }
 
-@media (min-width: 800px) {
+form{
+  display: flex;
+  flex-direction:column;
+}
+form input{
+  padding-left:18px;
+  background-color: var(--grey-3);
+  border: none;
+  border-radius: 4px;
+} 
 
-  #containerUserInfo {
-    width: 21.25%;
-    height: 27px;
-    left: 306px;
-    top: 15px;
+form button{
+  border: none;
+  color: var(--grey-6);
+  background-color: var(--brand-2);
+  border-radius: 4px;
+}
+
+form input,button{
+  max-width:376px;
+  min-width:290px;
+  height: 40px;
+  margin:10px 0;
+}
+
+@media (min-width:1024px){
+  section{
+    display: flex;
+    flex-direction:row;
   }
-
-  #containerUserInfo:nth-child(4n) {
-    margin-right: 0%;
+  .kenzieHabit{
+    width: 50%;
+    height: 100%;
+    padding:15% 8%;
+    display: flex;
+    flex-direction:column;
+    justify-content: start;
+    gap:10%;
+    border-radius:10px 0 0 10px;
+    
   }
-
+  
+  .login div{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding-left:15px;
+  }
+  
+  .login{
+    width: 50%;
+    padding:10% 10%;
+    justify-content: center;
+  }
 }
