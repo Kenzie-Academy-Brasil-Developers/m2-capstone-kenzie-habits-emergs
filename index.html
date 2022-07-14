@@ -2,14 +2,40 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenzie Habit</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <title>Página de login</title>
 </head>
 
 <body>
-  <!-- comentário para ser removido depois, foi somente colocado para criar a branch -->
+  <main>
+    <section>
+      <div class="kenzieHabit">
+        <h1> KenzieHabit </h1>
+        <p> <a href="#">If you are going to use a passage of Lorem ipsum </a></p>
+        <span> you need to be sure there insn't anything </span>
+      </div>
+
+      <div class="login">
+        <div>
+          <h1> Login </h1>
+        </div>
+
+        <form>
+          <label for="user" id="userLabel"> Usuário </label>
+          <input type="email" id="user" placeholder="Nome de usuário">
+
+          <label for="password" id="passwordLabel"> Senha </label>
+          <input type="password" id="password" placeholder="Digite sua senha">
+
+          <button name="buttonLogin" class="buttonLogin" id="buttonLogin">Entrar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./src/scripts/login.js"></script>
 </body>
 
 </html>
