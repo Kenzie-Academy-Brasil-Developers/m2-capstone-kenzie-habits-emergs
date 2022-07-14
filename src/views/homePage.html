@@ -13,13 +13,17 @@
 <body>
     <header>
         <div id="containerLogo" class="containerLogo">
-            <h1>KenzieHabit</h1>
-            <img src="../assets/img/user.png" alt="">
-
+            <div class="alignHeader">
+                <h1>KenzieHabit</h1>
+                <img src="../assets/img/user.png" alt="">
+            </div>
         </div>
+
         <div id="userContainer" class="userContainer">
-            <img src="../assets/img/Ellipse 2.png" alt="userImage">
+            <div class="alignHeaderTwo">
+                <img src="../assets/img/Ellipse 2.png" alt="userImage">
             <h2>Julia Silva Camargo</h2>
+            </div>
         </div>
     </header>
     <main>
@@ -44,18 +48,16 @@
         </div>
     </main>
 
-    <div class="background-deleteHabits">
-        <div id="deleteHabits" class="display_none container-deleteHabits">
-            <div class="header-deleteHabits">
-                <h3>Excluir Hábito</h3>
-                <button class="btn btn-X">X</button>
-            </div>
-            <h3>Certeza que deseja excluir esse hábito?</h3>
-            <p>Após executar essa ação não será possível desfazer</p>
-            <div class="btn-saveChangesDelete">
-                <button type="button" class="btn btn-cancel">Cancelar</button>
-                <button type="button" class="btn btn-yesDelete">Sim, excluir esse hábito</button>
-            </div>
+    <div id="deleteHabits" class="display_none container-deleteHabits">
+        <div class="header-deleteHabits">
+            <h3>Excluir Hábito</h3>
+            <button class="btn btn-X">X</button>
+        </div>
+        <h3>Certeza que deseja excluir esse hábito?</h3>
+        <p>Após executar essa ação não será possível desfazer</p>
+        <div class="btn-saveChangesDelete">
+            <button type="button" class="btn btn-cancel">Cancelar</button>
+            <button type="button" class="btn btn-yesDelete">Sim, excluir esse hábito</button>
         </div>
     </div>
 
@@ -98,9 +100,9 @@
         </div>
         <form>
             <label for="name">Nome</label><br>
-            <input type="text" placeholder="Júlia Silva Camargo" class="name"><br>
+            <input type="text" id= "nameUserEdit" placeholder="Júlia Silva Camargo" class="name"><br>
             <label for="image">URL da imagem do perfil</label><br>
-            <input type="text" placeholder="https://imagem.com.br" class="image"><br>
+            <input type="text" id="imageUserEdit" placeholder="https://imagem.com.br" class="image"><br>
             <button type="button" id="btn-saveChangesProfile" class="btn btn-saveChangesProfile">Salvar
                 Alterações</button>
         </form>

@@ -1,4 +1,5 @@
 import Api from "./api.controller.js";
+import User from "./user.controller.js";
 export default class Habit {
   static table = document.querySelector(".table");
   static createButton = document.querySelector("#createButton");
@@ -116,3 +117,6 @@ Habit.editHabits();
 Habit.listHabits();
 Habit.listHabitsCheckeds();
 Habit.deleteHabits();
+User.showUser();
+User.logout();
+User.editProfile();
