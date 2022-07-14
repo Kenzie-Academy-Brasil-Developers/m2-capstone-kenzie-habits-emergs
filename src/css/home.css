@@ -1,96 +1,379 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-:root { 
-  font-family: Inter, sans-serif; 
-  --brand-1: #415AF3; 
-  --brand-2: #4150D2; 
-  --brand-3: #A0ADF9; 
-  --brand-4: #D7E4FB; 
-  --black: #000000; --grey-1: #212529; --grey-2: #343A40; --grey-3: #DEE2E6; --grey-4: #E9ECEF; --grey-5: #F1F3F5; --grey-6: #FFFFFF; --sucess: #56CF8E; --error-1: #E64445; --error-2: #F03839; }
 
-  .createHabits,
-  .container-deleteHabits,
-  .editHabits,
-  .editProfile {
-    position: fixed;
-    top: 114px;
-    left: 550px;
-    width: 32rem;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--grey-2);
-    border-radius: 8px;
-    flex-direction: column;
-    background-color: var(--grey-6);
-    align-items: center;
-    gap: 1rem;
-  }
+:root {
+  font-family: Inter, sans-serif;
+  --brand-1: #415AF3;
+  --brand-2: #4150D2;
+  --brand-3: #A0ADF9;
+  --brand-4: #D7E4FB;
+  --black: #000000;
+  --grey-1: #212529;
+  --grey-2: #343A40;
+  --grey-3: #DEE2E6;
+  --grey-4: #E9ECEF;
+  --grey-5: #F1F3F5;
+  --grey-6: #FFFFFF;
+  --sucess: #56CF8E;
+  --error-1: #E64445;
+  --error-2: #F03839;
+}
 
-body { 
+.createHabits,
+.container-deleteHabits,
+.editHabits,
+.editProfile {
+  position: fixed;
+  top: 114px;
+  left: 550px;
+  width: 32rem;
+  height: fit-content;
   display: flex;
-  align-items: center; 
-  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  color: var(--grey-2);
+  border-radius: 8px;
+  flex-direction: column;
+  background-color: var(--grey-6);
+  align-items: center;
+  gap: 1rem;
 }
 
-header { 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  width: 100%; }
-
-main { width: 100%; max-width: 1000px; }
-.alignHeader, .alignHeaderTwo { width: 100%; max-width: 988px; display: flex; justify-content: space-between; margin-left: 30px; margin-right: 30px; }
-.alignHeaderTwo { justify-content: flex-start; }
-.containerLogo { color: var(--brand-1); display: flex; flex-direction: row; justify-content: center; height: 60px; align-items: center; }
-.containerLogo h1 { font-weight: 700; font-size: 22px; padding-top: 10px; }
-#containerLogo img { width: 40px; height: 40px; border-radius: 40px; }
-.userContainer { background-color: var(--brand-1); display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 20px; height: 160px; font-size: 20px; color: var(--grey-6); font-weight: 600; padding: 20px; }
-.userContainer img { width: 60px; height: 60px; border-radius: 60px; }
-.userContainer h2 { margin-left: 23px; }
-.h2Buttons { display: flex; flex-direction: row; justify-content: space-between; gap: 20px; padding-top: 30px; padding-bottom: 30px; }
-.h2Buttons h2 { font-size: 20px; font-weight: 600; }
-.btn-filter { border: none; color: var(--grey-2); background-color: var(--grey-6); font-size: 16px; }
-.btn-filterCreate { color: var(--grey-6); background-color: var(--brand-1); font-size: 16px; border: 2px solid var(--brand-1); border-radius: 4px; }
-.table { border: 1px solid var(--grey-4); border-collapse: collapse; width: 1000px; height: 390px; font-size: 14px; }
-table th { color: var(--grey-3); font-size: 16px; font-weight: 500; border-bottom: 1px solid var(--grey-4); height: 40px; text-align: left; }
-table td { border-bottom: 1px solid var(--grey-4); height: 40px; }
-.tableCategory { background-color: var(--brand-3); border: transparent; border-radius: 4px; color: var(--brand-1); text-align: center; height: 24px; display: inline-block; padding: 5px 8px; }
-.btn-X { background-color: var(--grey-6); border: none; color: var(--grey-3); width: 1rem; }
-.btn-Edit { border: none; background-color: var(--grey-6); }
-.loadMore { border: 2px solid var(--brand-1); background-color: var(--brand-1); color: var(--grey-6); width: 150px; height: 30px; border-radius: 4px; margin-left: 400px; }
-
-.createHabits, 
-.container-deleteHabits, 
-.editHabits, 
-.editProfile { 
-  background-color: var(--grey-6); 
-  color: var(--grey-2); 
-  width: 32rem; 
-  height: 30rem; 
-  align-items: center; 
-  justify-content: center; 
-  display: flex; 
-  border-radius: 8px; 
-  flex-direction: column; 
-  gap: 1rem; 
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.header-createHabits, .header-editHabits, .checkbox, .header-deleteHabits, .header-editProfile { display: flex; flex-direction: row; justify-content: space-between; width: 25rem; }
-.title, .name, .image { display: flex; justify-content: flex-start; background-color: var(--grey-5); color: var(--grey--2--); width: 25rem; height: 3rem; border-radius: 4px; border: 2px solid var(--grey-5); }
-.description { display: flex; justify-content: flex-start; background-color: var(--grey-5); color: var(--grey--2--); width: 25rem; height: 5rem; border-radius: 4px; border: 2px solid var(--grey-5); }
-.selectcategory { display: flex; justify-content: flex-start; background-color: var(--grey-5); color: var(--grey--2--); width: 25rem; height: 3rem; border-radius: 4px; border: 2px solid var(--grey-5); }
-.btn-createHabits { background-color: var(--brand-1); width: 25rem; height: 3rem; border-radius: 4px; border: 2px solid var(--grey-5); color: var(--grey-6); }
-.btn-div { display: flex; flex-direction: row; justify-content: space-between; width: 25rem; }
-.btn-delete { background-color: var(--grey-5); width: 12rem; height: 3rem; border-radius: 4px; border: 2px solid var(--grey-5); color: var(--grey-2); }
-.btn-saveChanges { background-color: var(--brand-3); width: 12rem; height: 3rem; border-radius: 4px; border: 2px solid var(--grey-5); color: var(--grey-6); }
-.btn-saveChangesProfile { background-color: var(--brand-3); width: 25.5rem; height: 3rem; border-radius: 4px; border: 2px solid var(--grey-5); color: var(--grey-6); }
-#checkbox { border: 1.4px solid var(--grey-3); border-radius: 2px; width: 1rem; height: 1rem; }
-.btn-saveChangesDelete { display: flex; flex-direction: row; justify-content: space-between; width: 25rem; }
-.btn-cancel { background-color: var(--grey-5); color: var(--grey-2); width: 12rem; height: 3rem; border-radius: 4px; border: transparent; }
-.btn-yesDelete { background-color: var(--error-1); color: var(--grey-6); width: 12rem; height: 3rem; border-radius: 4px; border: transparent; }
-.display_none { display: none; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.alignHeader,
+.alignHeaderTwo {
+  width: 100%;
+  max-width: 988px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.alignHeaderTwo {
+  justify-content: flex-start;
+}
+
+.containerLogo {
+  color: var(--brand-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+}
+
+.containerLogo h1 {
+  font-weight: 700;
+  font-size: 22px;
+  padding-top: 10px;
+}
+
+#containerLogo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.userContainer {
+  background-color: var(--brand-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 160px;
+  font-size: 20px;
+  color: var(--grey-6);
+  font-weight: 600;
+  padding: 20px;
+}
+
+.userContainer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+}
+
+.userContainer h2 {
+  margin-left: 23px;
+}
+
+.h2Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.h2Buttons h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn-filter {
+  border: none;
+  color: var(--grey-2);
+  background-color: var(--grey-6);
+  font-size: 16px;
+}
+
+.btn-filterCreate {
+  color: var(--grey-6);
+  background-color: var(--brand-1);
+  font-size: 16px;
+  border: 2px solid var(--brand-1);
+  border-radius: 4px;
+}
+
+.table {
+  border: 1px solid var(--grey-4);
+  border-collapse: collapse;
+  width: 1000px;
+  height: 390px;
+  font-size: 14px;
+}
+
+table th {
+  color: var(--grey-3);
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--grey-4);
+  height: 40px;
+  text-align: left;
+}
+
+table td {
+  border-bottom: 1px solid var(--grey-4);
+  height: 40px;
+}
+
+.tableCategory {
+  background-color: var(--brand-3);
+  border: transparent;
+  border-radius: 4px;
+  color: var(--brand-1);
+  text-align: center;
+  height: 24px;
+  display: inline-block;
+  padding: 5px 8px;
+}
+
+.btn-X {
+  background-color: var(--grey-6);
+  border: none;
+  color: var(--grey-3);
+  width: 1rem;
+}
+
+.btn-Edit {
+  border: none;
+  background-color: var(--grey-6);
+}
+
+.loadMore {
+  border: 2px solid var(--brand-1);
+  background-color: var(--brand-1);
+  color: var(--grey-6);
+  width: 150px;
+  height: 30px;
+  border-radius: 4px;
+  margin-left: 400px;
+}
+
+.createHabits,
+.container-deleteHabits,
+.editHabits,
+.editProfile {
+  background-color: var(--grey-6);
+  color: var(--grey-2);
+  width: 32rem;
+  height: 30rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 8px;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.header-createHabits,
+.header-editHabits,
+.checkbox,
+.header-deleteHabits,
+.header-editProfile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25rem;
+}
+
+.title,
+.name,
+.image {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--grey-5);
+  color: var(--grey--2--);
+  width: 25rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+}
+
+.description {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--grey-5);
+  color: var(--grey--2--);
+  width: 25rem;
+  height: 5rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+}
+
+.selectcategory {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--grey-5);
+  color: var(--grey--2--);
+  width: 25rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+}
+
+.btn-createHabits {
+  background-color: var(--brand-1);
+  width: 25rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+  color: var(--grey-6);
+}
+
+.btn-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25rem;
+}
+
+.btn-delete {
+  background-color: var(--grey-5);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+  color: var(--grey-2);
+}
+
+.btn-saveChanges {
+  background-color: var(--brand-3);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+  color: var(--grey-6);
+}
+
+.btn-saveChangesProfile {
+  background-color: var(--brand-3);
+  width: 25.5rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 2px solid var(--grey-5);
+  color: var(--grey-6);
+}
+
+#checkbox {
+  border: 1.4px solid var(--grey-3);
+  border-radius: 2px;
+  width: 1rem;
+  height: 1rem;
+}
+
+.btn-saveChangesDelete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25rem;
+}
+
+.btn-cancel {
+  background-color: var(--grey-5);
+  color: var(--grey-2);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: transparent;
+}
+
+.btn-yesDelete {
+  background-color: var(--error-1);
+  color: var(--grey-6);
+  width: 12rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: transparent;
+}
+
+#createHabits,
+#editHabits,
+#editProfile {
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.323);
+}
+
+#createForm,
+#formEdit,
+#editProfileForm {
+  background-color: var(--grey-6);
+}
+
+
+.display_none {
+  display: none;
+}
 
 @media (max-width: 1200px) {
-  main { margin-left: 10%; margin-right: 10%; width: 80%; display: flex; flex-direction: column; justify-content: center; }
-  .table { width: 100%; }
-  .loadMore { margin: 20px auto 0px; }}
+  main {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .table {
+    width: 100%;
+  }
+
+  .loadMore {
+    margin: 20px auto 0px;
+  }
+}

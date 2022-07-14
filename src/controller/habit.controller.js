@@ -10,8 +10,9 @@ export default class Habit {
   static buttonEditModal = document.querySelector("#btn-saveChangesProfile");
   static buttonDelete = document.querySelector("#btn-delete");
   static buttonComplete = document.querySelector("#completeButton");
-  static buttonAll = document.querySelector("buttonAll");
+  static buttonAll = document.querySelector("#buttonAll");
   static modalDelete = document.querySelector("#btn-delete");
+  static buttonChecked = document.querySelector("#completeButton");
   static async createHabits() {
     this.createButton.addEventListener("click", () => {
       this.mmodal.classList.remove("display_none");
@@ -69,7 +70,7 @@ export default class Habit {
     this.buttonDelete.addEventListener("click", async () => {
       const idPost = localStorage.getItem("@capstone-m2:idPost");
       this.modalEdit.classList.add("display_none");
-      // this.modalDelete.classList.remove('display_none')
+      this.modalDelete.classList.remove("display_none");
       await Api.deleteHabit(idPost);
       location.reload();
     });
@@ -110,13 +111,121 @@ export default class Habit {
     });
   }
 
-  static async listHabitsCheckeds() {}
+  static async listHabitsCheckeds() {
+    this.buttonChecked.addEventListener("click", async (e) => {
+      const response = await Api.readHabits();
+      this.table.innerHTML = "";
+      const trHead = document.createElement("tr");
+      const thStatus = document.createElement("th");
+      const thTitle = document.createElement("th");
+      const thDescription = document.createElement("th");
+      const thCategory = document.createElement("th");
+      const thEdit = document.createElement("th");
+      thStatus.innerText = "status";
+      thTitle.innerText = "Título";
+      thDescription.innerText = "Descrição";
+      thCategory.innerText = "Categoria";
+      thEdit.innerText = "Editar";
+      trHead.append(
+        thStatus,
+        thTitle,
+        thDescription,
+        thDescription,
+        thCategory,
+        thEdit
+      );
+      this.table.append(trHead);
+      response.forEach((e) => {
+        if (e.habit_status == true) {
+          const tr = document.createElement("tr");
+          tr.classList.add("habitLine");
+          const lineCheckbox = document.createElement("td");
+          const inputCheckbox = document.createElement("input");
+          inputCheckbox.type = "checkbox";
+          inputCheckbox.classList.add("checkboxHabits");
+          inputCheckbox.id = `check${e.habit_id}`;
+          if (e.habit_status == true) {
+            inputCheckbox.checked = true;
+          }
+          lineCheckbox.append(inputCheckbox);
+          const title = document.createElement("td");
+          title.innerText = `${e.habit_title}`;
+          const description = document.createElement("td");
+          description.innerText = `${e.habit_description}`;
+          const category = document.createElement("td");
+          const span = document.createElement("span");
+          category.append(span);
+          span.innerText = `${e.habit_category}`;
+          category.classList.add("tableCategory");
+          const editar = document.createElement("td");
+          editar.innerHTML = `<button id='${e.habit_id}' class='btn-Edit'>editar</button>`;
+          this.table.append(tr);
+          tr.append(lineCheckbox, title, description, category, editar);
+        }
+      });
+    });
+  }
+  static async listAllHabits() {
+    this.buttonAll.addEventListener("click", async (e) => {
+      this.table.innerHTML = "";
+      const trHead = document.createElement("tr");
+      const thStatus = document.createElement("th");
+      const thTitle = document.createElement("th");
+      const thDescription = document.createElement("th");
+      const thCategory = document.createElement("th");
+      const thEdit = document.createElement("th");
+      thStatus.innerText = "status";
+      thTitle.innerText = "Título";
+      thDescription.innerText = "Descrição";
+      thCategory.innerText = "Categoria";
+      thEdit.innerText = "Editar";
+      trHead.append(
+        thStatus,
+        thTitle,
+        thDescription,
+        thDescription,
+        thCategory,
+        thEdit
+      );
+      this.table.append(trHead);
+      const response = await Api.readHabits();
+      console.log(response);
+      response.forEach((e) => {
+        const tr = document.createElement("tr");
+        tr.classList.add("habitLine");
+        const lineCheckbox = document.createElement("td");
+        const inputCheckbox = document.createElement("input");
+        inputCheckbox.type = "checkbox";
+        inputCheckbox.classList.add("checkboxHabits");
+        inputCheckbox.id = `check${e.habit_id}`;
+        if (e.habit_status == true) {
+          inputCheckbox.checked = true;
+        }
+        lineCheckbox.append(inputCheckbox);
+        const title = document.createElement("td");
+        title.innerText = `${e.habit_title}`;
+        const description = document.createElement("td");
+        description.innerText = `${e.habit_description}`;
+        const category = document.createElement("td");
+        const span = document.createElement("span");
+        category.append(span);
+        span.innerText = `${e.habit_category}`;
+        category.classList.add("tableCategory");
+        const editar = document.createElement("td");
+        editar.innerHTML = `<button id='${e.habit_id}' class='btn-Edit'>editar</button>`;
+        this.table.append(tr);
+        tr.append(lineCheckbox, title, description, category, editar);
+      });
+    });
+  }
 }
 Habit.createHabits();
 Habit.editHabits();
 Habit.listHabits();
 Habit.listHabitsCheckeds();
 Habit.deleteHabits();
+Habit.listHabitsCheckeds();
+Habit.listAllHabits();
 User.showUser();
 User.logout();
 User.editProfile();
