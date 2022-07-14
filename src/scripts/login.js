@@ -6,7 +6,7 @@ function run(){
   const btnLogin = document.querySelector('#buttonLogin');
 
   btnLogin.addEventListener('click',()=>{
-    User.login(user.value.password.value)
+    User.login(user.value,password.value)
     })
 }
 
